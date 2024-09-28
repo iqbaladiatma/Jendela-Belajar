@@ -95,8 +95,9 @@ img {
   .fs-3 {
     font-size: 1rem;
   }
+}.h4 {
+  text-decoration: none;
 }
-
 .nav-link {
   transition: color 0.3s ease, background-color 0.3s ease;
 }
@@ -167,7 +168,7 @@ img {
 /*** Service End ***/
 
 /*** Features Start ***/
-.feature .feature-item {
+/* .feature .feature-item {
   text-align: center;
   border-radius: 10px;
   background: var(--bs-light);
@@ -183,7 +184,9 @@ img {
   background: var(--bs-white);
   border-radius: 10px;
   display: inline-block;
-}
+} */
 /*** Features End ***/
+
+
 
 
