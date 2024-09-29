@@ -26,7 +26,9 @@ h6 {
 /* Navbar */
 .navbar {
   background-color: transparent;
+  transition: top 0.3s ease-in-out;
 }
+
 
 .navbar-brand {
   font-weight: bold;
@@ -85,6 +87,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -165,6 +168,8 @@ img {
 .service .service-item:hover .service-img img {
   transform: scale(1.2);
 }
+
+
 /*** Service End ***/
 
 /*** Features Start ***/
@@ -186,6 +191,107 @@ img {
   display: inline-block;
 } */
 /*** Features End ***/
+
+/* tata letak */
+/* Styling Our Programs */
+.service-item .service-img img {
+  width: 100%; 
+  height: 200px; 
+  object-fit: cover; 
+  transition: transform 0.3s ease-in-out; 
+}
+
+/* Efek hover untuk gambar */
+.service-item:hover .service-img img {
+  transform: scale(1.05); 
+}
+
+/* Styling untuk judul program */
+.service-item a.h4 {
+  font-size: 1.25rem; 
+  color: #333; 
+  text-decoration: none; 
+  transition: color 0.3s ease-in-out;
+}
+
+.service-item a.h4:hover {
+  color: #007bff; 
+}
+
+
+.service-item .p-4 {
+  padding: 1.5rem; 
+  background-color: #f8f9fa; 
+  border-radius: 0 0 10px 10px; 
+}
+
+
+.service-item:nth-child(odd) .service-img img {
+  height: 250px; 
+}
+
+.service-item:nth-child(even) .service-img img {
+  height: 300px; 
+}
+
+/* Modifikasi tombol */
+.service-item .btn-primary {
+  background-color: #007bff; 
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.service-item .btn-primary:hover {
+  background-color: #0056b3; 
+}
+/* Styling Our Programs End*/
+
+
+/* Styling Our Course */
+/* Pengaturan untuk container feature-item */
+.feature-item {
+  background-color: #f8f9fa; 
+  border-radius: 10px; 
+  transition: transform 0.3s ease; 
+  text-align: center; 
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+}
+
+/* Pengaturan untuk gambar (ikon) */
+.feature-icon img {
+  width: 100px; 
+  height: 100px; 
+  margin-bottom: 20px; 
+  object-fit: contain; 
+}
+
+/* Efek hover untuk item */
+.feature-item:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+}
+
+/* Style untuk heading dan paragraph */
+.feature-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #333; 
+}
+
+.feature-item p {
+  font-size: 0.95rem;
+  color: #666; 
+  margin-bottom: 20px;
+}
+
+/* Style untuk tombol */
+.feature-item a.btn {
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: 50px; 
+}
+/* Styling Our Course End */
+
 
 
 

@@ -1,3 +1,27 @@
+<?php
+include "service/database.php";
+
+    $register_massage = "";
+
+ if (isset($_POST["register"])) {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    try {
+        $sql ="INSERT INTO users (username, password) VALUES ('$username', '$password')";
+        
+    if ($db->query($sql)) {
+        $register_massage = "Daftar Akun Berhasil, Silahkan login";
+            //  kalau gagal masuk.
+            }else{
+                $register_massage = "Daftar Akun Gagal, Silahkan coba lagi";
+            }
+        }catch (mysqli_sql_exception) { //catch butuh parameter
+        $register_massage = "username sudah ada,silahkan ganti yang lain";
+    }
+    $db->close();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>

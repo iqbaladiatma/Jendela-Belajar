@@ -14,18 +14,18 @@
   </head>
   <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg shadow-sm sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm" id="navbar">
       <div class="container">
         <a class="navbar-brand" href="#">
-          <img src="./assets/logo.png" width="40">
+          <img src="./assets/logo.png" width="40" alt="Logo">
         </a>
         <a class="navbar-brand" href="#home">Jendela Belajar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse end-0" id="navbarNavAltMarkup">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-            <a class="nav-link page-scroll" aria-current="page" href="#home">Home</a>
+            <a class="nav-link page-scroll" href="#home">Home</a>
             <a class="nav-link page-scroll" href="#about">About Us</a>
             <a class="nav-link page-scroll" href="#programs">Programs</a>
             <a class="nav-link page-scroll" href="#course">Course</a>
@@ -36,10 +36,10 @@
     </nav>
     <!-- End Navbar -->
     <!-- Hero -->
-    <div class="py-lg-14 py-10 position-relative bg-cover m-lg-4" style="background-image:
+    <div class="py-lg-14 py-10 position-relative bg-cover m-lg-4 pt-5" style="background-image:
      url(./assets/images/background/gradient-bg.png);" id="home">
 <!-- Image -->
-<div class="container">
+<div class="container" data-aos="fade-up">
   <div class="row align-items-center mb-6">
     <div class="col-12 col-lg-7 order-md-2">
       <div class="mb-2 mb-md-0">
@@ -194,7 +194,7 @@ d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.
               </div>
             </div>
             <div>
-              <a href="#!" class="btn btn-primary mt-5">Become a mentor</a>
+              <a href="./login.php" class="btn btn-primary mt-5">Become a mentor</a>
             </div>
           </div>
         </div>
@@ -660,8 +660,30 @@ d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.
       $(target).collapse('toggle');
     });
   });
+  
 
 </script>
+
+<script>
+  let lastScrollTop = 0;
+  const navbar = document.getElementById('navbar');
+
+  window.addEventListener('scroll', function() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // Scroll ke bawah, sembunyikan navbar
+      navbar.style.top = '-70px';  // Sesuaikan ketinggian navbar jika lebih tinggi
+    } else {
+      // Scroll ke atas, tampilkan navbar
+      navbar.style.top = '0';
+    }
+
+    lastScrollTop = scrollTop;
+  });
+</script>
+
+
 <script src="animation.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 

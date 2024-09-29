@@ -18,8 +18,7 @@ function animate() {
 
     // Meminta frame berikutnya untuk animasi agar halus
     requestAnimationFrame(animate);
-}
+};
 
-// Memulai animasi saat halaman di-load
 
-animate(:)
+
