@@ -5,6 +5,7 @@
   --txt-secondary: #222222;
   --icons-bg-primary: tomato;
   --icons-bg-secondary: #777777;
+  --shadow-primary: rgba(0, 0, 0, 0.2)
 }
 
 body {
@@ -130,7 +131,7 @@ img {
 }
 
 .logo {
-  background-color: #e2edff;
+  background-color: var(--bg-secondary);
   display: flex;
   width: 100%;
 }
@@ -150,7 +151,7 @@ img {
 }
 
 .service .service-item:hover {
-  box-shadow: 0 0 45px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 45px var(--shadow-primary);
 }
 
 .service .service-item .service-img {
@@ -209,19 +210,19 @@ img {
 /* Styling untuk judul program */
 .service-item a.h4 {
   font-size: 1.25rem; 
-  color: #333; 
+  color: var(--txt-secondary); 
   text-decoration: none; 
   transition: color 0.3s ease-in-out;
 }
 
 .service-item a.h4:hover {
-  color: #007bff; 
+  color: var(--bg-primary); 
 }
 
 
 .service-item .p-4 {
   padding: 1.5rem; 
-  background-color: #f8f9fa; 
+  background-color: var(--bg-secondary); 
   border-radius: 0 0 10px 10px; 
 }
 
@@ -236,13 +237,13 @@ img {
 
 /* Modifikasi tombol */
 .service-item .btn-primary {
-  background-color: #007bff; 
+  background-color: var(--bg-primary); 
   border: none;
   transition: background-color 0.3s ease-in-out;
 }
 
 .service-item .btn-primary:hover {
-  background-color: #0056b3; 
+  background-color: var(--bg-primary); 
 }
 /* Styling Our Programs End*/
 
@@ -250,11 +251,11 @@ img {
 /* Styling Our Course */
 /* Pengaturan untuk container feature-item */
 .feature-item {
-  background-color: #f8f9fa; 
+  background-color: var(--bg-secondary); 
   border-radius: 10px; 
   transition: transform 0.3s ease; 
   text-align: center; 
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 0 15px var(--shadow-primary); 
 }
 
 /* Pengaturan untuk gambar (ikon) */
@@ -268,19 +269,19 @@ img {
 /* Efek hover untuk item */
 .feature-item:hover {
   transform: scale(1.05); 
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 0 20px var(--shadow-primary); 
 }
 
 /* Style untuk heading dan paragraph */
 .feature-item h4 {
   font-size: 1.2rem;
   margin-bottom: 15px;
-  color: #333; 
+  color: var(--txt-secondary); 
 }
 
 .feature-item p {
   font-size: 0.95rem;
-  color: #666; 
+  color: var(--icons-bg-secondary); 
   margin-bottom: 20px;
 }
 
